@@ -8,23 +8,22 @@ import lombok.*;
 
 import java.io.Serial;
 import java.io.Serializable;
-import java.time.OffsetDateTime;
 
 @Data
 @Entity
 @Builder
 @AllArgsConstructor
 @Getter
+@EqualsAndHashCode
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class SensorMonitoring implements Serializable {
-
+public class SensorAlert implements Serializable {
     @Serial
-    private static final long serialVersionUID = -7628117749761419296L;
+    private static final long serialVersionUID = 8525554157780940511L;
 
     @Id
     @AttributeOverride(name = "id", column = @Column(name = "id", columnDefinition = "BIGINT"))
     private SensorId id;
-    private Double lastTemperature;
-    private OffsetDateTime updatedAt;
-    private Boolean enabled;
+
+    private double maxTemperature;
+    private double minTemperature;
 }
