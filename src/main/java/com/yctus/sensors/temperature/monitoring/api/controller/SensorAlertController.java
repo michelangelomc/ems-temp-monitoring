@@ -44,7 +44,6 @@ public class SensorAlertController {
                 .maxTemperature(sensorAlert.getMaxTemperature())
                 .minTemperature(sensorAlert.getMinTemperature())
                 .build();
-
     }
 
     @PutMapping
