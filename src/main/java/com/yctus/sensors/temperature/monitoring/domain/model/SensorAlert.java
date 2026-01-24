@@ -12,9 +12,8 @@ import java.io.Serializable;
 @Data
 @Entity
 @Builder
-@AllArgsConstructor
 @Getter
-@EqualsAndHashCode
+@AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class SensorAlert implements Serializable {
     @Serial

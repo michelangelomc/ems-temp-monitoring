@@ -6,9 +6,9 @@ import io.hypersistence.tsid.TSID;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-@Configuration
+@Configuration("monitoringTsIdJacksonConfig")
 public class TsIdJacksonConfig {
-    @Bean
+    @Bean(name = "monitoringTsIdModule")
     public Module tsIdModule() {
         SimpleModule module = new SimpleModule();
         module.addSerializer(TSID.class, new TsIdToStringSerial());
